@@ -1,4 +1,24 @@
 //read the input
+const numOfRolls = process.argv;
+
+
+const timer = array =>{
+  if(array.length !== 0){
+    for(let time of array){
+      let allotedTime = 0;
+      if(time > 0 && Number.isInteger(parseInt(time)) ){
+        allotedTime = time * 1000;
+        setTimeout(() => {
+          // print the char here
+          process.stdout.write('\x07');
+        }, allotedTime) 
+      }
+    }
+  }
+}
+
+timer(numOfRolls.slice(2).sort());
+
 //go through the array
 //multiply by a thousand because it's in milliseconds
 //try recurssion on this one
