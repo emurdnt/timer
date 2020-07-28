@@ -3,8 +3,8 @@ const numOfRolls = process.argv;
 const timer = array =>{
   if(array.length !== 0){
     for(let time of array){
+      //make sure it's non-negative and it's a number
       if(time > 0 && Number.isInteger(parseInt(time))){
-        allotedTime = time * 1000;
         setTimeout(() => {
           // print the char here
           process.stdout.write('\x07');
