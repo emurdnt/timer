@@ -1,17 +1,14 @@
 //read the input
 const numOfRolls = process.argv;
-
-
 const timer = array =>{
   if(array.length !== 0){
     for(let time of array){
-      let allotedTime = 0;
-      if(time > 0 && Number.isInteger(parseInt(time)) ){
+      if(time > 0 && Number.isInteger(parseInt(time))){
         allotedTime = time * 1000;
         setTimeout(() => {
           // print the char here
           process.stdout.write('\x07');
-        }, allotedTime) 
+        }, Number(time * 1000))
       }
     }
   }
